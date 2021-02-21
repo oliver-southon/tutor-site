@@ -6,5 +6,21 @@
 
 
 {% block body %}
-<h1>Hello!</h1>
+<form action = "{{ url_for('addrec') }}" method = "POST">
+    <label>First Name</label><br>
+    <input type="text" name="fnm"><br>
+    <label>Last Name</label><br>
+    <input type="text" name="lnm"><br>
+    <label>Age</label><br>
+    <input type="text" name="age"><br>
+    <label>Email</label><br>
+    <input type="text" name="email"><br>
+    <label>Language</label><br>
+    <input type="text" name="lang"><br>
+    <label>Description</label><br>
+    <input type="text" name="desc"><br>
+    <label>Preferred Contact Method</label><br>
+    <input type="text" name="cm"><br>
+    <input type="submit" value="submit"><br>
+</form>
 {% endblock %}
