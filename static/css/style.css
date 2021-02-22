@@ -1,0 +1,198 @@
+/* ------------------------------------- */
+/* BASIC SETUP */
+/* ------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial';
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------- */
+
+/* ----- HEADINGS ----- */
+
+h1 {
+    font-size: 280%;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ----- BUTTONS ------ */
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #3498db;
+    color: #fff;
+    border: 1px solid #3498db;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #3498db;
+    color: #3498db;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #2887c7;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #3498db;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #3498db;
+    color: #fff;
+}
+
+/* ----- FORMS ----- */
+
+form input, textarea {
+    margin-bottom: 2%;
+}
+
+form label {
+    font-weight: bold;
+    color: rgb(63, 60, 60);
+}
+
+form input[type="submit"] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+form input[type="submit"]:hover {
+    background:rgb(168, 163, 163)
+}
+
+
+
+/* ------------------------------------- */
+/* HEADER */
+/* ------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../src/header-min.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    /*border: 1px solid white; */
+    position: absolute;
+    width: 1140px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text-box p {
+    color: white;
+}
+
+/* ------------------------------------- */
+/* MENU */
+/* ------------------------------------- */
+
+#section-contact {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+.grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.grid h2 {
+    text-align: center;
+}
+
+/* .item-item1 {
+   background-color: #2674a8;
+}
+
+.item-item2 {
+   background-color: #2674a8;
+} */
+
+.item-item2-1 {
+    height: 100vh;
+    padding: 10% 5% 10% 5%;
+}
+
+.item2-1-head {
+    height: 18%;
+    background-color: #ccd2d6;
+    border-radius: 15px 50px 0 0;
+    padding: 20px;
+}
+
+.item2-1-head h2 {
+    margin-bottom: 2%;
+    color: rgb(41, 38, 38);
+}
+
+.item2-1-head p {
+    font-size: 17px;
+    font-weight: 110%;
+    line-height: 120%;
+    font-family: serif;
+}
+
+.item2-1-body {
+    height: 85%;
+    background-color: #ecf0f1;
+    border-radius: 0 0 15px 50px;
+    padding: 20px;
+}
+
+.item2-1-body form {
+    margin-top: 3%;
+    margin-left: 12%;
+    font-size: larger;
+    font-family: sans-serif;
+    line-height: 150%;
+    font-weight: 500%;
+}
+
+
+
+/* .item-item3 {
+    background-color: #2674a8;
+} */
+
