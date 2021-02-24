@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
-{% block head %}
-<title>Coding Help</title>
-{% endblock %}
-
+{% block head%}{% endblock %}
 
 {% block body %}
 <header>
     <div class="hero-text-box">
         <h1>Just Here to Help With Your Coding Stuff</h1>
+        <hr>
         <a class="btn btn-full" href="#section-contact">Get a hand</a>
         <a class="btn btn-ghost" href="https://github.com/oliver-southon">My Github</a>
     </div>
@@ -22,26 +21,41 @@
             <div class="item-item2-1">
                 <div class="item2-1-head">
                     <h2>Please fill in some details</h2>
-                    <p>If you need help quick - feel free to leave me a message on my Instagram. However, if you got the time, I would appreciate if you fill in this form. That way, I can look at the data and grasp an idea of who I'm helping and what I can do to better help them. It's purely optional. :)</p>
+                
+                    <p>If you need help quick - feel free to leave me a message on my Instagram. However, if you got the time, I would appreciate if you fill in this form. That way, I can look at the data and grasp an idea of who I'm helping and what I can do to better help them. It's purely optional. The data is stored in a local sqlite3 database and can only be seen by me.</p>
                 </div>
                 <div class="item2-1-body">
-                    <form id="form-contact" action = "{{ url_for('addrec') }}" method = "POST">
-                        <label>First Name</label><br>
-                        <input type="text" name="fnm"><br>
-                        <label>Last Name</label><br>
-                        <input type="text" name="lnm"><br>
-                        <label>Age</label><br>
-                        <input type="text" name="age"><br>
-                        <label>Email</label><br>
-                        <input type="text" name="email"><br>
-                        <label>Language/s</label><br>
-                        <input type="text" name="lang"><br>
-                        <label>Description</label><br>
-                        <textarea name="desc"></textarea><br>
-                        <label>Preferred Contact Method</label><br>
-                        <input type="text" name="cm"><br>
-                        <input type="submit" value="> submit"><br>
-                    </form>
+                    <br>
+                    <br>
+                    <div class="container">
+                        <form action="" method="POST" class="form" role="form">
+                            {{ form.csrf_token()}}
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    {{ wtf.form_field(form.firstName, class="form-control", placeholder="First Name")}}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{ wtf.form_field(form.lastName, class="form-control", placeholder="Last Name")}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-9">
+                                    {{ wtf.form_field(form.email, class="form-control", placeholder="email")}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    {{ wtf.form_field(form.primLang, class="form-control", placeholder="primary language")}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    {{ wtf.form_field(form.desc, class="form-control", placeholder="Description")}}
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,6 +63,7 @@
         </div>
     </div>
 </section>
+{% endblock %}
 <!--
 <form action = "{{ url_for('addrec') }}" method = "POST">
     <label>First Name</label><br>
@@ -69,4 +84,3 @@
 </form>
 
 -->
-{% endblock %}
